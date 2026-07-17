@@ -23,5 +23,10 @@ test.describe('Validate Orders From Home Page', () => {
         await homePage.addToCartFromHomePage(orderData.firstOrder);
     });
 
+    test('TC008 [Home Page] Remove Order From Cart', async () => {
+        await homePage.addToCartFromHomePage(orderData.firstOrder);
+        await homePage.removeOrder(orderData.firstOrder);
+    });
+
 
 });

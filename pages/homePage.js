@@ -38,6 +38,19 @@ class homePage {
         await removeBtn.waitFor({ state: 'visible' });
     }
 
+    async removeOrder(productName) { 
+        const productCard = this.page.locator(bodyLocators.inventoryList, {
+            has: this.page.locator(bodyLocators.inventoryName, { hasText: productName })
+        });
+
+        const removeBtn = productCard.locator('button:has-text("Remove")');
+        await removeBtn.waitFor({ state: 'visible' });
+        await removeBtn.click();
+
+        const addToCartBtn = productCard.locator('button:has-text("Add to cart")');
+        await addToCartBtn.waitFor({ state: 'visible' });
+    }
+
 
 }
 module.exports = homePage;
