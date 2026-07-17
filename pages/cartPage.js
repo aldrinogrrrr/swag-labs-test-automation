@@ -21,6 +21,14 @@ class CartPage {
         await shoppingCartBtn.click();
     }
 
+    async validateOrderAddedToCart(productName) {
+        await expect(this.page).toHaveURL(/.*cart/);
+        const cartCard = this.page.locator(cartLocators.cartItem, {
+            has: this.page.locator(cartLocators.cartName, {hasText: productName })
+        });
+        await cartCard.waitFor({ state: 'visible' });
+    }
+
 
 
 
