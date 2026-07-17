@@ -3,6 +3,7 @@ require('dotenv').config();
 const LoginPage = require('../pages/loginPage');
 const HomePage = require('../pages/homePage');
 const CartPage = require('../pages/cartPage');
+const { orderData } = require('../test-data/order-test-data');
 
 
 test.describe ('Validate Cart Page', () => {
@@ -24,5 +25,11 @@ test.describe ('Validate Cart Page', () => {
     test('TC005 [Cart Page] Validate Cart Page', async () => {
         await cartPage.navigateToCartPage();
         await cartPage.validateCartPage();
+    });
+
+    test('TC007 [Cart Page] Validate Order Added To Cart', async () => {
+        await homePage.addToCartFromHomePage(orderData.firstOrder);
+        await cartPage.navigateToCartPage();
+        await cartPage.validateOrderAddedToCart(orderData.firstOrder);
     });
 });
