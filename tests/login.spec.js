@@ -24,7 +24,7 @@ test.describe('Validate Login @smoke', () => {
 
     test ('TC002 [Login] Log in with incorrect credentials', async () => {
         await loginPage.login(process.env.wronguser, process.env.password);
-        await loginPage.validateloginMessage(loginUiLabels.loginError);
+        await loginPage.validateloginMessage();
     });
 
     test ('TC003 [Login] User Logs Out', async () => {

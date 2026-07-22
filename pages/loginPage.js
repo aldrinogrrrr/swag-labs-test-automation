@@ -1,5 +1,6 @@
 const { expect } = require('@playwright/test');
 const { loginPageLocators } = require('../locators/loginPageLocators');
+const { loginUiLabels } = require('../ui-labels/login-ui-labels');
 
 class LoginPage {
     constructor(page) {
@@ -25,10 +26,10 @@ class LoginPage {
         await this.page.waitForLoadState('domcontentloaded');
     }
 
-    async validateloginMessage(message) {
+    async validateloginMessage() {
         const msg = this.page.locator(loginPageLocators.message);
         await msg.waitFor({ state: 'visible' });
-        await expect(msg).toContainText(message);
+        await expect(msg).toContainText(loginUiLabels.loginError);
     }
 
 }
