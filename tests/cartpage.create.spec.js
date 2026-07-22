@@ -7,7 +7,7 @@ const CheckoutPage = require('../pages/checkoutPage');
 const { orderData, customerInfo } = require('../test-data/order-test-data');
 
 
-test.describe('Validate Item Modifications on Cart', () => {
+test.describe('Validate Item Modifications on Cart @smoke', () => {
 
         let loginPage;
         let homePage;

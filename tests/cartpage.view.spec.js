@@ -6,7 +6,7 @@ const CartPage = require('../pages/cartPage');
 const { orderData } = require('../test-data/order-test-data');
 
 
-test.describe ('Validate Cart Page', () => {
+test.describe ('Validate Cart Page @smoke', () => {
 
     let loginPage;
     let homePage;

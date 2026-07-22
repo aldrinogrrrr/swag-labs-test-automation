@@ -5,7 +5,7 @@ const HomePage = require('../pages/homePage');
 const { loginPageLocators } = require('../locators/loginPageLocators');
 const { loginUiLabels } = require('../ui-labels/login-ui-labels');
 
-test.describe('Validate Login', () => {
+test.describe('Validate Login @smoke', () => {
 
     let loginPage;
     let homePage;

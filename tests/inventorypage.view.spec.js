@@ -6,7 +6,7 @@ const InventoryPage = require('../pages/inventoryPage');
 const { orderData } = require('../test-data/order-test-data');
 
 
-test.describe('Validate Inventory Page', () => {
+test.describe('Validate Inventory Page @regression', () => {
 
     let loginPage;
     let homePage;

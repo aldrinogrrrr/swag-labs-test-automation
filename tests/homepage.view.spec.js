@@ -3,7 +3,7 @@ require('dotenv').config();
 const LoginPage = require('../pages/loginPage');
 const HomePage = require('../pages/homePage');
 
-test.describe('Validate Home Page', () => {
+test.describe('Validate Home Page @regression', () => {
 
     let loginPage;
     let homePage;
