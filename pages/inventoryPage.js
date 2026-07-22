@@ -18,12 +18,11 @@ class InventoryPage {
     }
 
     async validateProductInventory(productName) {
+        await expect(this.page).toHaveURL(/.*inventory-item/);
         const prodName = this.page.locator(inventoryLocators.inventoryName);
         await prodName.waitFor({ state: 'visible' });
         await expect(prodName).toContainText(productName);
     }
-
-
 
 }
 module.exports = InventoryPage;
