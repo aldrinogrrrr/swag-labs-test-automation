@@ -5,7 +5,7 @@ const HomePage = require('../pages/homePage');
 const { orderData } = require('../test-data/order-test-data');
 
 
-test.describe('Validate Order Modifications From Home Page', () => {
+test.describe('Validate Order Modifications From Home Page @regression', () => {
 
     let loginPage;
     let homePage;
